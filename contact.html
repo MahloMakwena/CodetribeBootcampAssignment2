@@ -19,27 +19,20 @@
   <div class="contact-bar">
     <div class="content-left">
       <h3>Send us a message</h3><br>
-      <form>
+      <form action="https://formspree.io/f/xjvlwpba" method="POST">
         <div class="input-row">
           <div class="input-group">
             <label>Name</label>
-            <input type="text" placeholder="Enter name">
-          </div>
-          <div class="input-group">
-            <label>Surname</label>
-            <input type="text" placeholder="Enter surname">
+            <input type="text" name="Name" placeholder="Enter name">
           </div>
           <div class="input-group">
             <label>Email</label>
-            <input type="email" placeholder="Enter email address" required>
+            <input type="email" name="Email" placeholder="Enter email address" required>
           </div>
-          <div class="input-group">
-            <label>Subject</label>
-            <input type="text" placeholder="Enter your subject ">
-          </div>
+
         </div>
         <label>Message</label>
-        <textarea rows="6" placeholder="Enter your message"></textarea>
+        <textarea name="message" rows="6" placeholder="Enter your message"></textarea>
         <button  class="btn" type="submit">Submit</button>
       </form>
     </div>
