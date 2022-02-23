@@ -23,40 +23,63 @@
         <div class="input-row">
           <div class="input-group">
             <label>Name</label>
-            <input type="text" name="Name" placeholder="Enter name">
+            <input type="text" name="Name" placeholder="Enter your name" required>
+          </div>
+		 <div class="input-group">
+            <label>Surname</label>
+            <input type="text" name="Name" placeholder="Enter your surname" required>
           </div>
           <div class="input-group">
             <label>Email</label>
-            <input type="email" name="Email" placeholder="Enter email address" required>
+            <input type="email" name="Email" placeholder="Enter your email address" required>
           </div>
 
         </div>
         <label>Message</label>
-        <textarea name="message" rows="6" placeholder="Enter your message"></textarea>
-        <button  class="btn" type="submit">Submit</button>
+        <textarea name="message" rows="6" placeholder="Enter your message" required></textarea>
+        <br><br><button  class="btn" type="submit">Submit</button>
       </form>
     </div>
     <div class="content-right">
+	
      <h3>Where to find me</h3>
-     <table>
+     <table id="tab">
      <tr>
        <td>Email</td>
-       <td>mahlomakwena@gmail.com</td>
+       <td id="email"></td>
      </tr>
      <tr>
        <td>Phone</td>
-       <td>0637666383</td>
+       <td id="phone"></td>
      </tr>
      <tr>
        <td>Github Account</td>
-       <td>mahlomakwena@gmail.com</td>
+       <td id="git"></td>
      </tr>
      <tr>
       <td>Address</td>
-      <td>Limpopo province,Tzaneen, Ga-sekororo</td>
+      <td id="address"></td>
     </tr></table>
     </div>
   </div>
+  
 </div>
+  <div class="map" style="margin-top:8px;width:100%;height:300px;text-align:center">
+  <h2>Tertiary location</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.389386886482!2d27.995616148541693!3d-26.184008669425925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b936f07e825%3A0xe635702a737f7a4a!2sUniversity%20Of%20Johannesburg!5e0!3m2!1sen!2sza!4v1645592924059!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+ <script>  
+	   let userInfo={
+	   myaddress:"Limpopo province,Tzaneen, Ga-sekororo",
+       email:"mahlomakwena@gmail.com",
+       phone:"0637666383",
+       github:"mahlomakwena@gmail.com"
+	   }
+document.getElementById("email").innerHTML=userInfo.email;
+document.getElementById("git").innerHTML=userInfo.github;
+document.getElementById("phone").innerHTML=userInfo.phone;
+document.getElementById("address").innerHTML=userInfo.myaddress;
+	 
+   </script>
  </body>
 </html>

@@ -16,24 +16,18 @@
 	  </ul>
 	</nav>
 	 <div class="content">
-		<h1>Hi, I am <span>Mahlo Makwena</span></h1>
-		<h1>A Software developer</h1>
+		<h1 id="userdets"></h1>
+		<h1 id="cc"></h1>
 		<div class="edu-bg">
 			<h2>Educational background</h2><br/>
-			<h3><code>Study field: </code><p>Computer Science and Informatics(Extended)</h3> 
-				<h3><code>Year: </code><p>Third</h3> 
-					<h3><code>Institution: </code><p>University of Johannesburg</h3> 
+			<h3><code>Study field: </code><p id="fos"></h3> 
+				<h3><code>Year: </code><p id="year"></h3> 
+					<h3><code>Institution: </code><p id="school"></h3> 
 	   
 		</div><br>
 		<h2>Projects</h2><br>
-		<h3>EduWeb:</h3>
-		<p>School management website that enables both teachers<br> and learner to interact for educational purposes.</p>
-		<h2><code>Language:</code></h2><p>C#, html,css,javascript and jquery</p>
-		<br>
-		<h3>Nomakuphi:</h3>
-		<p>Network application that enables people to track down their missing children or anyone they know whenever they go missing, <br>for instance if someone is reported missing, the police department store details of missing person on the system,<br> and everytime police find the missing people, they can check if the person is already reported missing or not.<br><br>If the person exists on the system, they can easily contact the person who registered a missing person,<br> and if the person is not registered they will report them missing on their system.</p>
-		<h2><code>Language:</code></h2><p>Java</p>
-		
+		<div id="projects"></div>
+
 	</div>
 	 <div class="img-content">
 		 <img src="./img/logo.jpg" class="bgImg">
@@ -47,6 +41,26 @@
 		</ul>
 	</footer>
    </div>
-
+ <script > 
+ //educational background
+document.getElementById("cc").innerHTML="Software developer";
+document.getElementById("userdets").innerHTML="Hi, I am <span>Mahlo Makwena</span>";
+document.getElementById("fos").innerHTML="Computer Science and Informatics";
+document.getElementById("year").innerHTML="Third(Extended)";
+document.getElementById("school").innerHTML="University of Johannesburg(APK campus)";
+ //Array of objects containing previous projects details
+let myprojects=[
+{name:"EduWeb",language:"C#,JavaScript,jquery,ajax,css and html",description:"<p>School management website that enables both teachers<br> and learner to interact for educational purposes.</p>"},
+{name:"Nomakuphi",language:"Java",description:"<p>Network application that enables people to track down their missing children or anyone they know whenever they go missing, <br>for instance if someone is reported missing, the police department store details of missing person on the system,<br> and everytime police find the missing people, they can check if the person is already reported missing or not.<br><br>If the person exists on the system, they can easily contact the person who registered a missing person,<br> and if the person is not registered they will report them missing on their system.</p>"}
+] 
+	   //document.getElementById("pid").innerHTML="JJJJJ";
+	 let listUI="<table>"
+for(let i=0;i<myprojects.length;i++){
+listUI+="<tr><td><h3>"+myprojects[i].name+"</h3><td></tr><td><p>"+myprojects[i].description+"</p></td><td><h2><code>Language:</code></h2><p>"+myprojects[i].language+"</p></td>"
+//console.log(myprojects[i].name,myprojects[i].language);
+}
+listUI+="</table>";
+document.getElementById("projects").innerHTML=listUI;
+   </script>
   </body>
 </html>
